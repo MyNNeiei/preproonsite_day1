@@ -35,6 +35,7 @@ class SinglyLinkedList:
             while pos.next != None:
                 pos = pos.next
             pos.next = pNew
+
 mylist = SinglyLinkedList()
 pNew = DataNode("John")
 mylist.head = pNew
@@ -44,5 +45,5 @@ mylist.head.next = pNew
 print(mylist.head.next.name)
 mylist.traverse()
 pNew = DataNode("Bill")
-
+mylist.insertLast("Bill")
 
