@@ -28,7 +28,14 @@ class SinglyLinkedList:
         return
     def insertLast(self, data):
         pNew = DataNode(data)
-
+        if self.head == pNew:
+            print("This is an empty list.")
+        else:
+            pos = self.head
+            while pos is not None:
+                print('->', pos.name , end=" ")
+                pos = pos.next
+            print("")
 mylist = SinglyLinkedList()
 pNew = DataNode("John")
 mylist.head = pNew
@@ -38,4 +45,5 @@ mylist.head.next = pNew
 print(mylist.head.next.name)
 mylist.traverse()
 pNew = DataNode("Bill")
-mylist.head.next.next = pNew
+
+
